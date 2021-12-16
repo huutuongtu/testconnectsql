@@ -10,13 +10,17 @@ public class testbuttonchangeframe {
 
 
     testbuttonchangeframe() {
+        ImageIcon chu = new ImageIcon("C:\\Users\\huutu\\Desktop\\Autogress\\npy.png");
+        Image image = chu.getImage();
+        Image newimg = image.getScaledInstance(50, 50,  java.awt.Image.SCALE_SMOOTH);
+        chu = new ImageIcon(newimg);
         JPanel f;
         JFrame fr = new JFrame();
         fr.setUndecorated(true);
         fr.setSize(600,700);
         f = new JPanel();
         f.setSize(500, 300);
-        JButton bu = new JButton("123");
+        JButton bu = new JButton("123", chu);
         bu.setSize(20,20);
         f.add(bu);
         fr.add(f);
